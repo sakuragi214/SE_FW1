@@ -1,0 +1,13 @@
+D:\TCU_GH\FW\Forwarders\Forwarders\bin\Debug\Forwarders.exe.config
+D:\TCU_GH\FW\Forwarders\Forwarders\obj\Debug\Forwarders.vbprojResolveAssemblyReference.cache
+D:\TCU_GH\FW\Forwarders\Forwarders\obj\Debug\Forwarders.frmLogin.resources
+D:\TCU_GH\FW\Forwarders\Forwarders\obj\Debug\Forwarders.Resources.resources
+D:\TCU_GH\FW\Forwarders\Forwarders\obj\Debug\Forwarders.vbproj.GenerateResource.Cache
+D:\TCU_GH\FW\Forwarders\Forwarders\obj\Debug\Forwarders.xml
+D:\TCU_GH\FW\Forwarders\Forwarders\bin\Debug\Forwarders.exe
+D:\TCU_GH\FW\Forwarders\Forwarders\bin\Debug\Forwarders.pdb
+D:\TCU_GH\FW\Forwarders\Forwarders\bin\Debug\Forwarders.xml
+D:\TCU_GH\FW\Forwarders\Forwarders\obj\Debug\Forwarders.exe
+D:\TCU_GH\FW\Forwarders\Forwarders\obj\Debug\Forwarders.pdb
+D:\TCU_GH\FW\Forwarders\Forwarders\obj\Debug\Forwarders.vbproj.ResolveComReference.cache
+D:\TCU_GH\FW\Forwarders\Forwarders\obj\Debug\Forwarders.MDIForwarders.resources
