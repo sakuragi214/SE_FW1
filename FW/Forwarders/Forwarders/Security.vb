@@ -7,7 +7,7 @@ Public Class Security
 
 
         Dim rsLogin As New ADODB.Recordset
-        Dim logstr = ("SELECT userid, password From USERS WHERE userid='" & uname & "' and password='" & pword & "'")
+        Dim logstr = ("SELECT userid, password FROM Users WHERE userid = '" & uname & "' and password = '" & pword & "'")
 
         With rsLogin
             .CursorLocation = ADODB.CursorLocationEnum.adUseClient
