@@ -272,6 +272,7 @@ Partial Class Details
         'Label37
         '
         Me.Label37.AutoSize = True
+        Me.Label37.ForeColor = System.Drawing.Color.Red
         Me.Label37.Location = New System.Drawing.Point(5, 6)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(75, 13)
@@ -402,6 +403,7 @@ Partial Class Details
         'Label32
         '
         Me.Label32.AutoSize = True
+        Me.Label32.ForeColor = System.Drawing.Color.Red
         Me.Label32.Location = New System.Drawing.Point(8, 335)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(62, 13)
@@ -420,6 +422,7 @@ Partial Class Details
         'Label30
         '
         Me.Label30.AutoSize = True
+        Me.Label30.ForeColor = System.Drawing.Color.Red
         Me.Label30.Location = New System.Drawing.Point(8, 283)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(69, 13)
@@ -429,6 +432,7 @@ Partial Class Details
         'Label29
         '
         Me.Label29.AutoSize = True
+        Me.Label29.ForeColor = System.Drawing.Color.Red
         Me.Label29.Location = New System.Drawing.Point(8, 257)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(69, 13)
@@ -667,6 +671,7 @@ Partial Class Details
         'Label22
         '
         Me.Label22.AutoSize = True
+        Me.Label22.ForeColor = System.Drawing.Color.Red
         Me.Label22.Location = New System.Drawing.Point(785, 59)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(25, 13)
@@ -683,6 +688,7 @@ Partial Class Details
         'Label21
         '
         Me.Label21.AutoSize = True
+        Me.Label21.ForeColor = System.Drawing.Color.Red
         Me.Label21.Location = New System.Drawing.Point(741, 32)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(71, 13)
@@ -776,6 +782,7 @@ Partial Class Details
         'Label16
         '
         Me.Label16.AutoSize = True
+        Me.Label16.ForeColor = System.Drawing.Color.Red
         Me.Label16.Location = New System.Drawing.Point(626, 12)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(38, 13)

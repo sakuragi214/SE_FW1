@@ -413,6 +413,7 @@ Partial Class CustomInfo
         'Label50
         '
         Me.Label50.AutoSize = True
+        Me.Label50.ForeColor = System.Drawing.Color.Red
         Me.Label50.Location = New System.Drawing.Point(15, 110)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(49, 13)
@@ -422,6 +423,7 @@ Partial Class CustomInfo
         'Label49
         '
         Me.Label49.AutoSize = True
+        Me.Label49.ForeColor = System.Drawing.Color.Red
         Me.Label49.Location = New System.Drawing.Point(15, 84)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(89, 13)
@@ -440,6 +442,7 @@ Partial Class CustomInfo
         'Label47
         '
         Me.Label47.AutoSize = True
+        Me.Label47.ForeColor = System.Drawing.Color.Red
         Me.Label47.Location = New System.Drawing.Point(15, 32)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(49, 13)
