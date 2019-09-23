@@ -72,6 +72,30 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Advances.Designer.vb">
+      <DependentUpon>Advances.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Advances.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CertificateOfPayment.Designer.vb">
+      <DependentUpon>CertificateOfPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateOfPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomInfo.Designer.vb">
+      <DependentUpon>CustomInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Details.Designer.vb">
+      <DependentUpon>Details.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Details.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forwarders.Designer.vb">
       <DependentUpon>Forwarders.vb</DependentUpon>
     </Compile>
@@ -86,10 +110,22 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FW.vb" />
-    <Compile Include="Main.Designer.vb">
-      <DependentUpon>Main.vb</DependentUpon>
+    <Compile Include="History.Designer.vb">
+      <DependentUpon>History.vb</DependentUpon>
     </Compile>
-    <Compile Include="Main.vb">
+    <Compile Include="History.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liquidation.Designer.vb">
+      <DependentUpon>Liquidation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Liquidation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFW.Designer.vb">
+      <DependentUpon>MainFW.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainFW.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -107,23 +143,50 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ScheduleOfDelivery.Designer.vb">
+      <DependentUpon>ScheduleOfDelivery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleOfDelivery.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Security.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Advances.resx">
+      <DependentUpon>Advances.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CertificateOfPayment.resx">
+      <DependentUpon>CertificateOfPayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomInfo.resx">
+      <DependentUpon>CustomInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Details.resx">
+      <DependentUpon>Details.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forwarders.resx">
       <DependentUpon>Forwarders.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.vb</DependentUpon>
+    <EmbeddedResource Include="History.resx">
+      <DependentUpon>History.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liquidation.resx">
+      <DependentUpon>Liquidation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFW.resx">
+      <DependentUpon>MainFW.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScheduleOfDelivery.resx">
+      <DependentUpon>ScheduleOfDelivery.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -86,7 +86,104 @@ Public Class MDIForwarders
     Private m_ChildFormNumber As Integer
 
     Private Sub MDIForwarders_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.TreeView1.Nodes(0).ExpandAll()
+        f = New Advances
+        f.TopLevel = False
+        Me.Panel1.Controls.Add(f)
+        f.Dock = DockStyle.Fill
+        f.Show()
+
+
 
     End Sub
 
+    Private Sub StatusStrip_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles StatusStrip.ItemClicked
+
+    End Sub
+
+    Private Sub Form_Close(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Me.Closing
+        frmLogin.Show()
+
+    End Sub
+
+    Private Sub SplitContainer1_Panel2_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel2.Paint
+
+    End Sub
+
+    Private Sub SplitContainer1_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel1.Paint
+
+    End Sub
+    Private f As Form
+    Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
+
+        Dim node As TreeNode
+        node = TreeView1.SelectedNode
+        Select Case node.Text
+            Case "Advances"
+                f.Dispose()
+                f = New Advances
+                f.TopLevel = False
+                Me.Panel1.Controls.Add(f)
+                f.Dock = DockStyle.Fill
+                f.Show()
+
+            Case "Liquidation"
+                f.Dispose()
+                f = New Liquidation
+                f.TopLevel = False
+                Me.Panel1.Controls.Add(f)
+                f.Dock = DockStyle.Fill
+                f.Show()
+
+            Case "Main"
+                f.Dispose()
+                f = New MainFW
+                f.TopLevel = False
+                Me.Panel1.Controls.Add(f)
+                f.Dock = DockStyle.Fill
+                f.Show()
+
+            Case "Details"
+                f.Dispose()
+                f = New Details
+                f.TopLevel = False
+                Me.Panel1.Controls.Add(f)
+                f.Dock = DockStyle.Fill
+                f.Show()
+
+            Case "Custom Info"
+                f.Dispose()
+                f = New CustomInfo
+                f.TopLevel = False
+                Me.Panel1.Controls.Add(f)
+                f.Dock = DockStyle.Fill
+                f.Show()
+
+            Case "History"
+                f.Dispose()
+                f = New History
+                f.TopLevel = False
+                Me.Panel1.Controls.Add(f)
+                f.Dock = DockStyle.Fill
+                f.Show()
+
+            Case "Certificate Of Payment"
+                f.Dispose()
+                f = New CertificateOfPayment
+                f.TopLevel = False
+                Me.Panel1.Controls.Add(f)
+                f.Dock = DockStyle.Fill
+                f.Show()
+
+            Case "Schedule Of Delivery"
+                f.Dispose()
+                f = New ScheduleOfDelivery
+                f.TopLevel = False
+                Me.Panel1.Controls.Add(f)
+                f.Dock = DockStyle.Fill
+                f.Show()
+        End Select
+
+
+    End Sub
 End Class
