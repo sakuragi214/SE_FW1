@@ -521,6 +521,7 @@ Partial Class MDIForwarders
         TreeNode10.Name = "Node0"
         TreeNode10.Text = "Brokerage"
         Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode7, TreeNode10})
+        Me.TreeView1.ShowNodeToolTips = True
         Me.TreeView1.Size = New System.Drawing.Size(199, 417)
         Me.TreeView1.TabIndex = 0
         '

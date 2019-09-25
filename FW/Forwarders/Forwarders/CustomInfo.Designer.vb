@@ -167,18 +167,20 @@ Partial Class CustomInfo
         'Label65
         '
         Me.Label65.AutoSize = True
+        Me.Label65.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label65.Location = New System.Drawing.Point(3, 174)
         Me.Label65.Name = "Label65"
-        Me.Label65.Size = New System.Drawing.Size(56, 13)
+        Me.Label65.Size = New System.Drawing.Size(49, 15)
         Me.Label65.TabIndex = 12
         Me.Label65.Text = "CUD/VAT"
         '
         'Label64
         '
         Me.Label64.AutoSize = True
+        Me.Label64.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label64.Location = New System.Drawing.Point(3, 146)
         Me.Label64.Name = "Label64"
-        Me.Label64.Size = New System.Drawing.Size(74, 13)
+        Me.Label64.Size = New System.Drawing.Size(71, 15)
         Me.Label64.TabIndex = 11
         Me.Label64.Text = "Payment Time"
         '
@@ -200,9 +202,10 @@ Partial Class CustomInfo
         'CheckBox12
         '
         Me.CheckBox12.AutoSize = True
+        Me.CheckBox12.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox12.Location = New System.Drawing.Point(61, 122)
         Me.CheckBox12.Name = "CheckBox12"
-        Me.CheckBox12.Size = New System.Drawing.Size(67, 17)
+        Me.CheckBox12.Size = New System.Drawing.Size(65, 19)
         Me.CheckBox12.TabIndex = 8
         Me.CheckBox12.Text = "Payment"
         Me.CheckBox12.UseVisualStyleBackColor = True
@@ -240,36 +243,40 @@ Partial Class CustomInfo
         'Label63
         '
         Me.Label63.AutoSize = True
+        Me.Label63.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label63.Location = New System.Drawing.Point(3, 99)
         Me.Label63.Name = "Label63"
-        Me.Label63.Size = New System.Drawing.Size(65, 13)
+        Me.Label63.Size = New System.Drawing.Size(65, 15)
         Me.Label63.TabIndex = 3
         Me.Label63.Text = "Final Assess"
         '
         'Label62
         '
         Me.Label62.AutoSize = True
+        Me.Label62.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label62.Location = New System.Drawing.Point(3, 73)
         Me.Label62.Name = "Label62"
-        Me.Label62.Size = New System.Drawing.Size(55, 13)
+        Me.Label62.Size = New System.Drawing.Size(53, 15)
         Me.Label62.TabIndex = 2
         Me.Label62.Text = "Selectivity"
         '
         'Label61
         '
         Me.Label61.AutoSize = True
+        Me.Label61.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label61.Location = New System.Drawing.Point(3, 47)
         Me.Label61.Name = "Label61"
-        Me.Label61.Size = New System.Drawing.Size(58, 13)
+        Me.Label61.Size = New System.Drawing.Size(55, 15)
         Me.Label61.TabIndex = 1
         Me.Label61.Text = "Time Send"
         '
         'Label60
         '
         Me.Label60.AutoSize = True
+        Me.Label60.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label60.Location = New System.Drawing.Point(3, 21)
         Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(51, 13)
+        Me.Label60.Size = New System.Drawing.Size(50, 15)
         Me.Label60.TabIndex = 0
         Me.Label60.Text = "Entry No."
         '
@@ -288,18 +295,20 @@ Partial Class CustomInfo
         'Label59
         '
         Me.Label59.AutoSize = True
+        Me.Label59.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label59.Location = New System.Drawing.Point(12, 34)
         Me.Label59.Name = "Label59"
-        Me.Label59.Size = New System.Drawing.Size(89, 13)
+        Me.Label59.Size = New System.Drawing.Size(88, 15)
         Me.Label59.TabIndex = 26
         Me.Label59.Text = "Demurrage Begin"
         '
         'Label58
         '
         Me.Label58.AutoSize = True
+        Me.Label58.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label58.Location = New System.Drawing.Point(12, 6)
         Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(74, 13)
+        Me.Label58.Size = New System.Drawing.Size(72, 15)
         Me.Label58.TabIndex = 25
         Me.Label58.Text = "Storage Begin"
         '
@@ -322,27 +331,30 @@ Partial Class CustomInfo
         'Label57
         '
         Me.Label57.AutoSize = True
+        Me.Label57.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label57.Location = New System.Drawing.Point(313, 162)
         Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(30, 13)
+        Me.Label57.Size = New System.Drawing.Size(29, 15)
         Me.Label57.TabIndex = 23
         Me.Label57.Text = "CBM"
         '
         'Label56
         '
         Me.Label56.AutoSize = True
+        Me.Label56.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label56.Location = New System.Drawing.Point(313, 58)
         Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(89, 13)
+        Me.Label56.Size = New System.Drawing.Size(87, 15)
         Me.Label56.TabIndex = 22
         Me.Label56.Text = "Port of Discharge"
         '
         'Label55
         '
         Me.Label55.AutoSize = True
+        Me.Label55.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label55.Location = New System.Drawing.Point(313, 32)
         Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(79, 13)
+        Me.Label55.Size = New System.Drawing.Size(79, 15)
         Me.Label55.TabIndex = 21
         Me.Label55.Text = "Port of Loading"
         '
@@ -377,84 +389,93 @@ Partial Class CustomInfo
         'Label54
         '
         Me.Label54.AutoSize = True
+        Me.Label54.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label54.Location = New System.Drawing.Point(313, 6)
         Me.Label54.Name = "Label54"
-        Me.Label54.Size = New System.Drawing.Size(94, 13)
+        Me.Label54.Size = New System.Drawing.Size(92, 15)
         Me.Label54.TabIndex = 16
         Me.Label54.Text = "Location of Goods"
         '
         'Label53
         '
         Me.Label53.AutoSize = True
+        Me.Label53.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label53.Location = New System.Drawing.Point(15, 188)
         Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(87, 13)
+        Me.Label53.Size = New System.Drawing.Size(84, 15)
         Me.Label53.TabIndex = 15
         Me.Label53.Text = "Pick-up Location"
         '
         'Label52
         '
         Me.Label52.AutoSize = True
+        Me.Label52.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label52.Location = New System.Drawing.Point(15, 162)
         Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(104, 13)
+        Me.Label52.Size = New System.Drawing.Size(101, 15)
         Me.Label52.TabIndex = 14
         Me.Label52.Text = "Total Customs Value"
         '
         'Label51
         '
         Me.Label51.AutoSize = True
+        Me.Label51.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label51.Location = New System.Drawing.Point(15, 136)
         Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(81, 13)
+        Me.Label51.Size = New System.Drawing.Size(74, 15)
         Me.Label51.TabIndex = 13
         Me.Label51.Text = "Exchange Rate"
         '
         'Label50
         '
         Me.Label50.AutoSize = True
+        Me.Label50.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label50.ForeColor = System.Drawing.Color.Red
         Me.Label50.Location = New System.Drawing.Point(15, 110)
         Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(49, 13)
+        Me.Label50.Size = New System.Drawing.Size(49, 15)
         Me.Label50.TabIndex = 12
         Me.Label50.Text = "Currency"
         '
         'Label49
         '
         Me.Label49.AutoSize = True
+        Me.Label49.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label49.ForeColor = System.Drawing.Color.Red
         Me.Label49.Location = New System.Drawing.Point(15, 84)
         Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(89, 13)
+        Me.Label49.Size = New System.Drawing.Size(87, 15)
         Me.Label49.TabIndex = 11
         Me.Label49.Text = "Terms of Delivery"
         '
         'Label48
         '
         Me.Label48.AutoSize = True
+        Me.Label48.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label48.Location = New System.Drawing.Point(15, 58)
         Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(85, 13)
+        Me.Label48.Size = New System.Drawing.Size(88, 15)
         Me.Label48.TabIndex = 10
         Me.Label48.Text = "Country of Origin"
         '
         'Label47
         '
         Me.Label47.AutoSize = True
+        Me.Label47.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label47.ForeColor = System.Drawing.Color.Red
         Me.Label47.Location = New System.Drawing.Point(15, 32)
         Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(49, 13)
+        Me.Label47.Size = New System.Drawing.Size(47, 15)
         Me.Label47.TabIndex = 9
         Me.Label47.Text = "CE Code"
         '
         'Label46
         '
         Me.Label46.AutoSize = True
+        Me.Label46.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label46.Location = New System.Drawing.Point(15, 6)
         Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(63, 13)
+        Me.Label46.Size = New System.Drawing.Size(60, 15)
         Me.Label46.TabIndex = 8
         Me.Label46.Text = "Office Code"
         '
