@@ -97,3 +97,8 @@ C:\Users\HP\Desktop\Edit Here\Forwarders\Forwarders\obj\Debug\Forwarders.MainFW.
 C:\Users\HP\Desktop\Edit Here\Forwarders\Forwarders\obj\Debug\Forwarders.Resources.resources
 C:\Users\HP\Desktop\Edit Here\Forwarders\Forwarders\obj\Debug\Forwarders.ScheduleOfDelivery.resources
 C:\Users\HP\Desktop\Edit Here\Forwarders\Forwarders\obj\Debug\Forwarders.vbproj.GenerateResource.Cache
+C:\Users\HP\Desktop\khel\Git\Software Engineering\SE_FW1\FW\Forwarders\Forwarders\bin\Debug\Forwarders.exe.config
+C:\Users\HP\Desktop\khel\Git\Software Engineering\SE_FW1\FW\Forwarders\Forwarders\obj\Debug\Forwarders.vbproj.ResolveComReference.cache
+C:\Users\HP\Desktop\khel\Git\Software Engineering\SE_FW1\FW\Forwarders\Forwarders\obj\Debug\Forwarders.exe
+C:\Users\HP\Desktop\khel\Git\Software Engineering\SE_FW1\FW\Forwarders\Forwarders\obj\Debug\Forwarders.xml
+C:\Users\HP\Desktop\khel\Git\Software Engineering\SE_FW1\FW\Forwarders\Forwarders\obj\Debug\Forwarders.pdb
