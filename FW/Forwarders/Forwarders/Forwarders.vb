@@ -1,6 +1,23 @@
 ﻿Imports System.Windows.Forms
+Imports System.Data
+Imports System.Data.OleDb
+Imports ADODB
+Imports System.IO
+Imports System.Data.SqlClient
 
 Public Class MDIForwarders
+    Dim WithEvents aTimer As New System.Windows.Forms.Timer
+
+    Private Sub aTimer_Tick(ByVal sender As Object,
+                            ByVal e As System.EventArgs) Handles aTimer.Tick
+        ToolStripStatusLabel2.Text = DateTime.Now.ToString("MMMM dd, yyyy h:mm:ss tt")
+    End Sub
+
+    Private Sub Form1_Shown(ByVal sender As Object,
+                            ByVal e As System.EventArgs) Handles Me.Shown
+        aTimer.Interval = 250
+        aTimer.Start()
+    End Sub
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripButton.Click, NewWindowToolStripMenuItem.Click
         ' Create a new instance of the child form.
@@ -86,12 +103,62 @@ Public Class MDIForwarders
     Private m_ChildFormNumber As Integer
 
     Private Sub MDIForwarders_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.TreeView1.Nodes(0).ExpandAll()
-        f = New Advances
+        'TODO: This line of code loads data into the 'FWDataSet.Screen' table. You can move, or remove it, as needed.
+
+        ToolStripStatusLabel3.Text = ("USER: " + FW.gs_User)
+        If (gs_User = "forwarder") Then 'Make a form for Forwarder Welcome Screen
+            f = New MainFW
+        ElseIf (gs_User = "broker") Then 'Make a form for Broker Welcome Screen
+            f = New Advances
+        ElseIf (gs_User = "admin") Then 'Make a form for Admin Welcome Screen
+            f = New MainFW
+        End If
         f.TopLevel = False
         Me.Panel1.Controls.Add(f)
         f.Dock = DockStyle.Fill
         f.Show()
+        Dim Forwarding As TreeNode
+        Dim Brokerage As TreeNode
+        Dim UserSettings As TreeNode
+        If (FW.gs_User = "admin") Then
+            'Forwarding = New TreeNode("Forwarder")
+            'TreeView1.Nodes.Add(Forwarding)
+            'Forwarding.Nodes.Add("Details")
+            'Forwarding.Nodes.Add("Custom Info")
+            'Forwarding.Nodes.Add("History")
+            'Forwarding.Nodes.Add("Certificate Of Payment")
+            'Forwarding.Nodes.Add("Schedule Of Delivery")
+            'Brokerage = New TreeNode("Brokerage")
+            'TreeView1.Nodes.Add(Brokerage)
+            'Brokerage.Nodes.Add("Advances")
+            'Brokerage.Nodes.Add("Liquidation")
+            'UserSettings = New TreeNode("User Settings")
+            'TreeView1.Nodes.Add(UserSettings)
+            'Me.TreeView1.Nodes(0).ExpandAll()
+            'Me.TreeView1.Nodes(1).ExpandAll()
+            BindTreeViewAdmin()
+
+        ElseIf (FW.gs_User = "forwarder") Then
+            BindTreeViewForwarder()
+            'Forwarding = New TreeNode("Forwarder")
+            'TreeView1.Nodes.Add(Forwarding)
+            'Forwarding.Nodes.Add("Details")
+            'Forwarding.Nodes.Add("Custom Info")
+            'Forwarding.Nodes.Add("History")
+            'Forwarding.Nodes.Add("Certificate Of Payment")
+            'Forwarding.Nodes.Add("Schedule Of Delivery")
+            'Me.TreeView1.Nodes(0).ExpandAll()
+        ElseIf (FW.gs_User = "broker") Then
+            BindTreeViewBrokerage()
+            'Brokerage = New TreeNode("Brokerage")
+            'TreeView1.Nodes.Add(Brokerage)
+            'Brokerage.Nodes.Add("Advances")
+            'Brokerage.Nodes.Add("Liquidation")
+            'Me.TreeView1.Nodes(0).ExpandAll()
+        End If
+
+
+
 
 
 
@@ -143,6 +210,8 @@ Public Class MDIForwarders
                 f.Dock = DockStyle.Fill
                 f.Show()
 
+
+
             Case "Details"
                 f.Dispose()
                 f = New Details
@@ -182,8 +251,121 @@ Public Class MDIForwarders
                 Me.Panel1.Controls.Add(f)
                 f.Dock = DockStyle.Fill
                 f.Show()
+
+
+
         End Select
 
 
+    End Sub
+    Sub BindTreeViewAdmin()
+        Dim connetionString = "Data Source=khel; Initial Catalog=FW;Integrated Security=True;"
+        Dim conn As System.Data.SqlClient.SqlConnection = New SqlClient.SqlConnection(connetionString)
+        Dim da As New SqlDataAdapter
+        Dim cmd As New SqlCommand
+        Dim dt As New DataTable
+        Dim pke(0) As DataColumn
+        Dim i As Integer
+        Dim j As Integer
+        Try
+
+            cmd.CommandText = "Select * from SCREEN where Status='Active'"
+            da.SelectCommand = cmd
+            da.SelectCommand.Connection = conn
+            da.Fill(dt)
+            pke(0) = dt.Columns("ScreenID")
+            dt.PrimaryKey = pke
+            conn.Close()
+
+
+            TreeView1.Nodes.Add("Forwarders")
+            TreeView1.Nodes.Add("Brokerage")
+            TreeView1.Nodes.Add("Admin")
+            For j = 0 To dt.Rows.Count - 1
+                If (dt.Rows(j).Item("FormParent") = "Forwarders") Then
+                    TreeView1.Nodes(i).Nodes.Add(dt.Rows(j).Item("NodeName"))
+                    Me.TreeView1.Nodes(0).ExpandAll()
+                ElseIf (dt.Rows(j).Item("FormParent") = "Brokerage") Then
+                    TreeView1.Nodes(i + 1).Nodes.Add(dt.Rows(j).Item("NodeName"))
+                    Me.TreeView1.Nodes(1).ExpandAll()
+                ElseIf (dt.Rows(j).Item("FormParent") = "Admin") Then
+                    TreeView1.Nodes(i + 2).Nodes.Add(dt.Rows(j).Item("NodeName"))
+                    Me.TreeView1.Nodes(2).ExpandAll()
+                End If
+            Next
+
+
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+    Sub BindTreeViewForwarder()
+        Dim connetionString = "Data Source=khel; Initial Catalog=FW;Integrated Security=True;"
+        Dim conn As System.Data.SqlClient.SqlConnection = New SqlClient.SqlConnection(connetionString)
+        Dim da As New SqlDataAdapter
+        Dim cmd As New SqlCommand
+        Dim dt As New DataTable
+        Dim pke(0) As DataColumn
+        Dim i As Integer
+        Dim j As Integer
+        Try
+
+            cmd.CommandText = "Select * from SCREEN where Status='Active' AND FormParent='Forwarders'"
+            da.SelectCommand = cmd
+            da.SelectCommand.Connection = conn
+            da.Fill(dt)
+            pke(0) = dt.Columns("ScreenID")
+            dt.PrimaryKey = pke
+            conn.Close()
+
+
+            TreeView1.Nodes.Add("Forwarders")
+            For j = 0 To dt.Rows.Count - 1
+
+                TreeView1.Nodes(i).Nodes.Add(dt.Rows(j).Item("NodeName"))
+            Next
+            Me.TreeView1.Nodes(0).ExpandAll()
+
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+    Sub BindTreeViewBrokerage()
+        Dim connetionString = "Data Source=khel; Initial Catalog=FW;Integrated Security=True;"
+        Dim conn As System.Data.SqlClient.SqlConnection = New SqlClient.SqlConnection(connetionString)
+        Dim da As New SqlDataAdapter
+        Dim cmd As New SqlCommand
+        Dim dt As New DataTable
+        Dim pke(0) As DataColumn
+        Dim i As Integer
+        Dim j As Integer
+        Try
+
+            cmd.CommandText = "Select * from SCREEN where Status='Active' AND FormParent='Brokerage'"
+            da.SelectCommand = cmd
+            da.SelectCommand.Connection = conn
+            da.Fill(dt)
+            pke(0) = dt.Columns("ScreenID")
+            dt.PrimaryKey = pke
+            conn.Close()
+
+
+            TreeView1.Nodes.Add("Brokerage")
+            For j = 0 To dt.Rows.Count - 1
+                TreeView1.Nodes(i).Nodes.Add(dt.Rows(j).Item("NodeName"))
+            Next
+
+
+
+
+            Me.TreeView1.Nodes(0).ExpandAll()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class

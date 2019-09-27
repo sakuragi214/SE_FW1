@@ -1,6 +1,7 @@
 ﻿Imports System.Data.OleDb
 Imports ADODB
 Public Class Security
+
     Function fCHK(ByVal uname As String, ByVal pword As String) As Boolean
         Dim da As New System.Data.OleDb.OleDbDataAdapter()
         Dim ds As New DataSet()
