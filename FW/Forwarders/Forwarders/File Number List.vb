@@ -10,4 +10,12 @@ Public Class File_Number_List
         rs.CursorType = ADODB.CursorTypeEnum.adOpenStatic
         rs.LockType = ADODB.LockTypeEnum.adLockBatchOptimistic
     End Sub
+
+    Private Sub FilterData(text As String)
+        Throw New NotImplementedException()
+    End Sub
+
+    Private Sub File_Number_List_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

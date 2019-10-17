@@ -119,7 +119,7 @@ Public Class MDIForwarders
         f.Show()
         Dim Forwarding As TreeNode
         Dim Brokerage As TreeNode
-        Dim UserSettings As TreeNode
+        'Dim UserSettings As TreeNode
         ' If (FW.gs_User = "admin") Then
         'Forwarding = New TreeNode("Forwarder")
         'TreeView1.Nodes.Add(Forwarding)
@@ -266,7 +266,7 @@ Public Class MDIForwarders
 
     End Sub
     Sub BindTreeViewAdmin()
-        Dim connetionString = "Data Source=LAPTOP-SQ6GSPQV; Initial Catalog=FW;Integrated Security=True;"
+        Dim connetionString = "Data Source=khel; Initial Catalog=FW;Integrated Security=True;"
         Dim conn As System.Data.SqlClient.SqlConnection = New SqlClient.SqlConnection(connetionString)
         Dim da As New SqlDataAdapter
         Dim cmd As New SqlCommand
@@ -312,7 +312,7 @@ Public Class MDIForwarders
         End Try
     End Sub
     Sub BindTreeViewForwarder()
-        Dim connetionString = "Data Source=LAPTOP-SQ6GSPQV; Initial Catalog=FW;Integrated Security=True;"
+        Dim connetionString = "Data Source=khel; Initial Catalog=FW;Integrated Security=True;"
         Dim conn As System.Data.SqlClient.SqlConnection = New SqlClient.SqlConnection(connetionString)
         Dim da As New SqlDataAdapter
         Dim cmd As New SqlCommand
@@ -345,7 +345,7 @@ Public Class MDIForwarders
         End Try
     End Sub
     Sub BindTreeViewBrokerage()
-        Dim connetionString = "Data Source=LAPTOP-SQ6GSPQV; Initial Catalog=FW;Integrated Security=True;"
+        Dim connetionString = "Data Source=khel; Initial Catalog=FW;Integrated Security=True;"
         Dim conn As System.Data.SqlClient.SqlConnection = New SqlClient.SqlConnection(connetionString)
         Dim da As New SqlDataAdapter
         Dim cmd As New SqlCommand

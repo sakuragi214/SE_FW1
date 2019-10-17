@@ -83,14 +83,9 @@ Public Class UserPermissions
         rs.CursorLocation = ADODB.CursorLocationEnum.adUseClient
         rs.CursorType = ADODB.CursorTypeEnum.adOpenStatic
         rs.LockType = ADODB.LockTypeEnum.adLockBatchOptimistic
-        rs.Open("UPDATE
-    UserScreen
-SET
-    UserScreen.Status='" + ComboBox1.Text + "'
-FROM 
-    Users Inner Join UserScreen On Users.UserID=UserScreen.UserID Inner Join Screen On Screen.ScreenID=UserScreen.ScreenID
-WHERE
-        UserScreen.UserID ='" + TextBox1.Text + "' And UserScreen.ScreenID='" + TextBox2.Text + "'", gs_Conn, 3)
+        rs.Open("UPDATE UserScreen SET UserScreen.Status='" + ComboBox1.Text + "' FROM  Users Inner Join 
+UserScreen On Users.UserID=UserScreen.UserID Inner Join Screen On Screen.ScreenID=UserScreen.ScreenID
+WHERE UserScreen.UserID ='" + TextBox1.Text + "' And UserScreen.ScreenID='" + TextBox2.Text + "'", gs_Conn, 3)
         FilterData(TextBox1.Text)
         MessageBox.Show("Please Re-Log In to Take Effect Changes")
 
@@ -101,4 +96,7 @@ WHERE
 
     End Sub
 
+    Private Sub btnAddUser_Click(sender As Object, e As EventArgs) Handles btnAddUser.Click
+        AddUser.Show()
+    End Sub
 End Class
