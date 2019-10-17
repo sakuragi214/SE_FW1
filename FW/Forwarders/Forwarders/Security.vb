@@ -15,6 +15,7 @@ Public Class Security
             .CursorType = ADODB.CursorTypeEnum.adOpenStatic
             .LockType = ADODB.LockTypeEnum.adLockBatchOptimistic
             .Open(logstr, gs_Conn)
+
         End With
 
 

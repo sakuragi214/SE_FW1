@@ -78,6 +78,12 @@
     <Compile Include="Advances.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Blank.Designer.vb">
+      <DependentUpon>Blank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Blank.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CertificateOfPayment.Designer.vb">
       <DependentUpon>CertificateOfPayment.vb</DependentUpon>
     </Compile>
@@ -94,6 +100,12 @@
       <DependentUpon>Details.vb</DependentUpon>
     </Compile>
     <Compile Include="Details.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="File Number List.Designer.vb">
+      <DependentUpon>File Number List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="File Number List.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forwarders.Designer.vb">
@@ -150,10 +162,19 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Security.vb" />
+    <Compile Include="UserPermissions.Designer.vb">
+      <DependentUpon>UserPermissions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserPermissions.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Advances.resx">
       <DependentUpon>Advances.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blank.resx">
+      <DependentUpon>Blank.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CertificateOfPayment.resx">
       <DependentUpon>CertificateOfPayment.vb</DependentUpon>
@@ -163,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Details.resx">
       <DependentUpon>Details.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="File Number List.resx">
+      <DependentUpon>File Number List.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forwarders.resx">
       <DependentUpon>Forwarders.vb</DependentUpon>
@@ -187,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ScheduleOfDelivery.resx">
       <DependentUpon>ScheduleOfDelivery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPermissions.resx">
+      <DependentUpon>UserPermissions.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
