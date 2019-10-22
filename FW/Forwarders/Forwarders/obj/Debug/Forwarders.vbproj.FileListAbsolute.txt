@@ -110,3 +110,5 @@ C:\Users\HP\Desktop\Edit Here\Forwarders\Forwarders\obj\Debug\Forwarders.UserPer
 C:\Users\HP\Desktop\Edit Here\Forwarders\Forwarders\obj\Debug\Forwarders.vbproj.GenerateResource.Cache
 C:\Users\HP\Desktop\Edit Here\Forwarders\Forwarders\obj\Debug\Interop.ADOR.dll
 C:\Users\HP\Desktop\Edit Here\Forwarders\Forwarders\obj\Debug\Forwarders.AddUser.resources
+C:\Users\HP\Desktop\Edit Here\Forwarders\Forwarders\obj\Debug\Forwarders.SetScreenStatus.resources
+C:\Users\HP\Desktop\Edit Here\Forwarders\Forwarders\obj\Debug\Forwarders.Billing.resources

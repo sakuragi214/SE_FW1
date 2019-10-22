@@ -32,7 +32,7 @@ Partial Class AddUser
         Me.txtMiddlename = New System.Windows.Forms.TextBox()
         Me.txtLastname = New System.Windows.Forms.TextBox()
         Me.txtPassword = New System.Windows.Forms.TextBox()
-        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnNext = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -116,21 +116,21 @@ Partial Class AddUser
         Me.txtPassword.Size = New System.Drawing.Size(100, 20)
         Me.txtPassword.TabIndex = 9
         '
-        'btnAdd
+        'btnNext
         '
-        Me.btnAdd.Location = New System.Drawing.Point(118, 292)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(90, 26)
-        Me.btnAdd.TabIndex = 10
-        Me.btnAdd.Text = "Add User"
-        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnNext.Location = New System.Drawing.Point(118, 292)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(90, 26)
+        Me.btnNext.TabIndex = 10
+        Me.btnNext.Text = "Next"
+        Me.btnNext.UseVisualStyleBackColor = True
         '
         'AddUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(335, 390)
-        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtLastname)
         Me.Controls.Add(Me.txtMiddlename)
@@ -158,5 +158,5 @@ Partial Class AddUser
     Friend WithEvents txtMiddlename As TextBox
     Friend WithEvents txtLastname As TextBox
     Friend WithEvents txtPassword As TextBox
-    Friend WithEvents btnAdd As Button
+    Friend WithEvents btnNext As Button
 End Class

@@ -84,6 +84,12 @@
     <Compile Include="Advances.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Billing.Designer.vb">
+      <DependentUpon>Billing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Billing.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Blank.Designer.vb">
       <DependentUpon>Blank.vb</DependentUpon>
     </Compile>
@@ -169,6 +175,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Security.vb" />
+    <Compile Include="SetScreenStatus.Designer.vb">
+      <DependentUpon>SetScreenStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SetScreenStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserPermissions.Designer.vb">
       <DependentUpon>UserPermissions.vb</DependentUpon>
     </Compile>
@@ -182,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Advances.resx">
       <DependentUpon>Advances.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing.resx">
+      <DependentUpon>Billing.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Blank.resx">
       <DependentUpon>Blank.vb</DependentUpon>
@@ -221,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ScheduleOfDelivery.resx">
       <DependentUpon>ScheduleOfDelivery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetScreenStatus.resx">
+      <DependentUpon>SetScreenStatus.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPermissions.resx">
       <DependentUpon>UserPermissions.vb</DependentUpon>

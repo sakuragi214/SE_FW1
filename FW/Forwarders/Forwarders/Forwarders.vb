@@ -260,6 +260,14 @@ Public Class MDIForwarders
                 f.Dock = DockStyle.Fill
                 f.Show()
 
+            Case "Billing"
+                f.Dispose()
+                f = New Billing
+                f.TopLevel = False
+                Me.Panel1.Controls.Add(f)
+                f.Dock = DockStyle.Fill
+                f.Show()
+
 
         End Select
 
