@@ -7,7 +7,9 @@ Imports System.Data.SqlClient
 
 Public Class MDIForwarders
     Dim WithEvents aTimer As New System.Windows.Forms.Timer
-
+    Dim count As Int32
+    Dim arr(3) As String
+    Dim but(3) As String
     Private Sub aTimer_Tick(ByVal sender As Object,
                             ByVal e As System.EventArgs) Handles aTimer.Tick
         ToolStripStatusLabel2.Text = DateTime.Now.ToString("MMMM dd, yyyy h:mm:ss tt")
@@ -105,6 +107,33 @@ Public Class MDIForwarders
     Private Sub MDIForwarders_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'FWDataSet.Screen' table. You can move, or remove it, as needed.
 
+        mdl.ds = New DataSet
+        mdl.adapter = New SqlDataAdapter("SELECT * FROM Button", mdl.conn)
+
+        count = mdl.adapter.Fill(mdl.ds, "Button")
+
+        setButtons()
+
+        If arr(0).Equals("Disable") Then
+            ToolStripButton1.Visible = False
+        Else
+            ToolStripButton1.Visible = True
+        End If
+
+        If arr(1).Equals("Disable") Then
+            ToolStripButton2.Visible = False
+        Else
+            ToolStripButton2.Visible = True
+        End If
+
+        If arr(2).Equals("Disable") Then
+            ToolStripButton3.Visible = False
+        Else
+            ToolStripButton3.Visible = True
+        End If
+
+        'ToolStripButton1.Visible = False
+
         ToolStripStatusLabel3.Text = ("USER: " + FW.gs_User)
         'If (gs_User = "forwarder") Then 'Make a form for Forwarder Welcome Screen
         f = New Blank
@@ -156,12 +185,6 @@ Public Class MDIForwarders
         'Brokerage.Nodes.Add("Liquidation")
         'Me.TreeView1.Nodes(0).ExpandAll()
         ' End If
-
-
-
-
-
-
     End Sub
 
     Private Sub StatusStrip_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles StatusStrip.ItemClicked
@@ -274,7 +297,7 @@ Public Class MDIForwarders
 
     End Sub
     Sub BindTreeViewAdmin()
-        Dim connetionString = "Data Source=khel; Initial Catalog=FW;Integrated Security=True;"
+        Dim connetionString = mdl.connectionString
         Dim conn As System.Data.SqlClient.SqlConnection = New SqlClient.SqlConnection(connetionString)
         Dim da As New SqlDataAdapter
         Dim cmd As New SqlCommand
@@ -320,7 +343,7 @@ Public Class MDIForwarders
         End Try
     End Sub
     Sub BindTreeViewForwarder()
-        Dim connetionString = "Data Source=khel; Initial Catalog=FW;Integrated Security=True;"
+        Dim connetionString = mdl.connectionString
         Dim conn As System.Data.SqlClient.SqlConnection = New SqlClient.SqlConnection(connetionString)
         Dim da As New SqlDataAdapter
         Dim cmd As New SqlCommand
@@ -353,7 +376,7 @@ Public Class MDIForwarders
         End Try
     End Sub
     Sub BindTreeViewBrokerage()
-        Dim connetionString = "Data Source=khel; Initial Catalog=FW;Integrated Security=True;"
+        Dim connetionString = mdl.connectionString
         Dim conn As System.Data.SqlClient.SqlConnection = New SqlClient.SqlConnection(connetionString)
         Dim da As New SqlDataAdapter
         Dim cmd As New SqlCommand
@@ -387,11 +410,29 @@ Public Class MDIForwarders
         End Try
     End Sub
 
-    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
+    Public Sub setButtons()
+        Dim rs2 As New ADODB.Recordset
+        Dim userid(count) As String, status(count) As String, buttonid(count) As String
+        rs2.CursorLocation = ADODB.CursorLocationEnum.adUseClient
+        rs2.CursorType = ADODB.CursorTypeEnum.adOpenStatic
+        rs2.LockType = ADODB.LockTypeEnum.adLockBatchOptimistic
 
-    End Sub
+        'MsgBox("1")
 
-    Private Sub EditMenu_Click(sender As Object, e As EventArgs) Handles EditMenu.Click
+        For I = 0 To count - 1
+            rs2.Open("SELECT userid, buttonid, status FROM UserButton WHERE (buttonid = '" & I + 1 & "' AND userid = '" & mdl.log & "')", gs_Conn, 3)
 
+            status(I) = rs2.Fields("status").Value
+            buttonid(I) = rs2.Fields("buttonid").Value
+
+            arr(I) = status(I)
+            but(I) = buttonid(I)
+
+            'MsgBox(I)
+            'MsgBox(arr(I))
+            'MsgBox(but(I))
+
+            rs2.Close()
+        Next I
     End Sub
 End Class

@@ -32,6 +32,8 @@ Partial Class SetScreenStatus
         Me.cboStatus = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnSave = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -49,23 +51,23 @@ Partial Class SetScreenStatus
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(12, 35)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(55, 13)
+        Me.Label2.Size = New System.Drawing.Size(18, 13)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Screen ID"
+        Me.Label2.Text = "ID"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(12, 61)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(61, 13)
+        Me.Label3.Size = New System.Drawing.Size(35, 13)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Form Name"
+        Me.Label3.Text = "Name"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(258, 35)
+        Me.Label4.Location = New System.Drawing.Point(259, 61)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(37, 13)
         Me.Label4.TabIndex = 3
@@ -99,7 +101,7 @@ Partial Class SetScreenStatus
         '
         Me.cboStatus.FormattingEnabled = True
         Me.cboStatus.Items.AddRange(New Object() {"Enable", "Disable"})
-        Me.cboStatus.Location = New System.Drawing.Point(301, 31)
+        Me.cboStatus.Location = New System.Drawing.Point(302, 57)
         Me.cboStatus.Name = "cboStatus"
         Me.cboStatus.Size = New System.Drawing.Size(121, 21)
         Me.cboStatus.TabIndex = 7
@@ -121,11 +123,31 @@ Partial Class SetScreenStatus
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(12, 408)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "Apply"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(302, 4)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(120, 23)
+        Me.Button3.TabIndex = 12
+        Me.Button3.Text = "Btn Permission"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'SetScreenStatus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(431, 437)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.cboStatus)
@@ -137,6 +159,7 @@ Partial Class SetScreenStatus
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.label1)
         Me.Name = "SetScreenStatus"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SetScreenStatus"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -154,4 +177,6 @@ Partial Class SetScreenStatus
     Friend WithEvents cboStatus As ComboBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnSave As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button3 As Button
 End Class

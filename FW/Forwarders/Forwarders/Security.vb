@@ -27,6 +27,7 @@ Public Class Security
             Else
 
                 fCHK = True
+                mdl.log = uname
             End If
 
         End With

@@ -118,6 +118,9 @@ Partial Class AddUser
         '
         'btnNext
         '
+        Me.btnNext.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnNext.Location = New System.Drawing.Point(118, 292)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(90, 26)
@@ -142,6 +145,7 @@ Partial Class AddUser
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "AddUser"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AddUser"
         Me.ResumeLayout(False)
         Me.PerformLayout()
